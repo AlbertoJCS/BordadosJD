@@ -1,0 +1,73 @@
+
+body {
+    /*margin: 0;*/
+    /* background-image: url(../img/fondo.jpg); */
+}
+
+.nombreEmpresa {
+    color: #ffffff; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 40px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 20px;
+  }
+
+.carousel-item img {
+    height: 500px; /* Establece la altura deseada para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo su relación de aspecto */
+  }
+
+
+.container-fluid.fondo {
+  background-image: url("../img/fondoServicios.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+ 
+.aside-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.aside-container img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.aside-container h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.aside-container h3 {
+  font-size: 18px;
+}
+
+.aside-container p {
+  font-size: 16px;
+}
+
+.galeria {
+  height: 200px;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .galeria {
+    width: 350px; /* Cambiar el ancho a tu preferencia */
+    height: 350px; /* Cambiar el alto a tu preferencia */
+  }
+}
