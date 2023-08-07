@@ -12,17 +12,17 @@
       <!--BARRA DE NAVEGACION-->
         <div class="row fixed-top">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <nav id="mainNav" class="navbar navbar-light navbar-expand-md text-black text-start border rounded py-3" data-bs-theme="light" style="background-color: #0833a2;">
+                <nav id="mainNav" class="navbar navbar-light navbar-expand-md text-black text-start border rounded " data-bs-theme="light" style="background-color: #0833a2;">
                     <div class="container"><a class="navbar-brand d-flex align-items-center" href="/">
                       <span><img src="img/costa-rica.png" alt=""></span><span class="nombreEmpresa">BordadosJD</span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                         <div id="navcol-1" class="collapse navbar-collapse">
                             <ul class="navbar-nav ms-auto mx-2">
                                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Catalogo.html">Catálogo</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Quienes_Somos.html">¿Quienes Somos?</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#bloqueServicio">Servicios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#bloqueCatalogo">Catálogo</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#bloqueQuienesSomos">¿Quienes Somos?</a></li>
                             </ul>
-                            <a class="btn btn-primary shadow" role="button" href="contacts.html">Contáctenos</a>
+                            <a class="btn btn-primary shadow" role="button" href="contacto.html">Contáctenos</a>
                         </div>
                     </div>
                 </nav>
@@ -34,16 +34,21 @@
       <br>
       <!--CARROUSEL-->
       <div class="row mt-4">
-        <div class="col-sm-10 col-lg-12">
-          <div id="carouselExample" class="carousel slide">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>          
               <div class="carousel-inner">
-                <div class="carousel-item active" >
+                <div class="carousel-item active data-bs-interval= 1000" >
                   <img src="img/Camisa CR.jpg" class="d-block w-100 img-fluid" alt="camisaCR">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item data-bs-interval= 1000">
                   <img src="img/carrousel_5.jpg" class="d-block w-100 img-fluid" alt="parche">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item data-bs-interval= 1000">
                   <img src="img/carrousel_3.jpg" class="d-block w-100 img-fluid" alt="...">
                 </div>
               </div>
@@ -57,24 +62,23 @@
               </button>
             </div>
         </div>
-  
       </div>
 
 
       <!--Servicios-->
-      <div class="container-fluid fondo mt-3">
+      <div id="bloqueServicio" class="container-fluid fondo p-5">
         <div class="container text-center">
           <div class="row" >
+            <h1 style="color: #ffffff" class="titulo mb-5 text-decoration-underline">Servicios Profesionales</h1>
             <div class="col-12">
               <div class="row">
-                <h1 style="color: #ffffff">Servicios que Ofrecemos</h1>
                 <div class="col-12 col-md-6 text-center">
                   <img src="img/ServicioBordado.jpg" class="border rounded-circle border-primary-subtle" style="width: 300px; height: 300px;" alt="">
-                  <h2>Servicios de Bordados</h2>
+                  <h2>Bordados</h2>
                 </div>
                 <div class="col-12 col-md-6 text-center">
                   <img class="border rounded-circle border-primary-subtle" src="img/grabadoLaser.png" alt="">
-                  <h2>Servicios con Lazer</h2>
+                  <h2>Diseños con Lazer</h2>
                 </div>
                 </div>
               </div>
@@ -84,31 +88,16 @@
       </div>
 
 
+      
+
       <div class="container text-center mt-5">
-        <div class="row pt-5">
-          <!--Info Aside-->
-          <div class="col info-nosotros mb-3">
-            <div class="row pt-5">
-              <div class="col mt-5 pt-4">
-                <aside class="aside-container px-5">
-                  <img src="img/logo.JPG" alt="Imagen del servicio">
-                  <h1 class="mt-5 mb-5">Servicio de Bordado y Láser</h1>
-                  <p>Horario de atención: Lunes a Viernes de 9:00 AM a 5:00 PM</p>
-                  <p>Sábados de 9:00 AM a 12:00 PM</p>
-                  <h3 class="mt-5">Teléfono: 8975-4119</h3>
-                  <h3>WhatsApp: 8819-7603</h3>
-                  <p>Dirección: Birrisito, Paraíso de Cartago</p>
-                  <a class="mt-3" href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a>
-                </aside>
-              </div>
-            </div>
-          </div>
+        <div class="row pt-5" id="bloqueCatalogo">
           <!--Catalogo de productos-->
-          <div class="col cards-productos mb-3 col-lg-8">
+          <div class="col cards-productos mb-3 col-lg-12">
             <div class="album py-5 bg-light">
               <div class="container">                
-                <h1>Catálogo de Productos</h1>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-12 g-3 mt-3">
+                <h1 class="titulo">Catálogo de Productos</h1>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 mt-3">
                   <!--Columna 1-->
                   <div class="col">
                     <div class="Card">
@@ -124,7 +113,7 @@
                   </div>
                   <!--Columna 2-->
                   <div class="col">
-                    <div class="card w-100">
+                    <div class="card w-100 h-100">
                       <img src="img/parchesCalavera.jpg" class="card-img-top" style="height: 255px;" alt="parches">
                       <div class="card-body">
                         <h5 class="card-title">Parches</h5>
@@ -135,7 +124,7 @@
                   </div>
                   <!--Columna 3-->
                   <div class="col">
-                    <div class="card w-100">
+                    <div class="card w-100 h-100">
                       <img src="img/Gorras.jpg" class="card-img-top" style="height: 255px;" alt="gorras">
                       <div class="card-body">
                         <h5 class="card-title">Gorras</h5>
@@ -146,7 +135,7 @@
                   </div>
                   <!--Columna 4-->
                   <div class="col">
-                    <div class="card w-100">
+                    <div class="card w-100 h-100">
                       <img src="img/Camisa CR2.jpg" class="card-img-top" style="height: 255px;" alt="camisas">
                       <div class="card-body">
                         <h5 class="card-title">Camisas</h5>
@@ -157,18 +146,18 @@
                   </div>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
       </div>
 
+      <hr class="my-4">
+
       <!--Galeria-->
       <div class="container-fluid align-content-center">
-        <div class="row pt-5">
-          <div class="container text-center align-content-center p-5">
-            <h1>Galeria</h1>
+        <div class="row pt-3">
+          <div class="container text-center align-content-center pb-2">
+            <h1 class="titulo">Galeria</h1>
           </div>
           <div class="container-fluid">
             <div class="row d-flex justify-content-center align-items-center">
@@ -212,15 +201,91 @@
           </div>  
         </div>
       </div>
+
+      <hr class="my-4">
+
+      <!--Quienes Somos-->
+      <div class="quienesSomos" id="bloqueQuienesSomos">
+        <div class="container">
+          <h1 class="text-center titulo">Quienes Somos?</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="somos container py-5">
+                <img src="img/logo.JPG" alt="">
+                <p>
+                  <span style="font-weight: bold; font-size: large;">Somos una empresa 100% Costarricense </span>con la misión, a travéz de los diseños bordados, resaltar la imagen o la marca de una manera profesional,
+                  sofisticada y duradera. Ofrecemos nuestra experencia a traves de los años, brindando servicios de personalización en camisetas,
+                  gorras, paños, incluso en otras piezas, pocos convencionales
+                  Somos una empresa 100% Costarricense con la misión, a travéz de los diseños bordados, resaltar la imagen o la marca de una manera profesional,
+                  sofisticada y duradera. Ofrecemos nuestra experencia a traves de los años, brindando servicios de personalización en camisetas,
+                  gorras, paños, incluso en otras piezas, pocos convencionales
+                </p>
+              </div>
+                <!--VIDEO-->
+                <div class="d-flex justify-content-center py-3">
+                  <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+                  </iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+              <h2 class="mb-4 text-center titulo">Ubicados En:</h2>
+              <section class="Mapa mb-1">
+                <div class="container" style="height: 480px">
+                <div class="mapa-wrapper container px-4 py-4 text-center  h-100" id="map"></div>
+                </div>
+              </section>
+            </div>
+        </div>
+      </div>
+
+    
+
+
       
-    
 
 
-
-    
-    
-
-
+      <div
+        class="wow fadeIn footer mt-3"
+        data-wow-delay="0.1s">
+        <div class="py-5">
+          <div class="row g-5 mx-2">
+            <div class="col-lg-3 col-md-3">
+              <h5 class="mb-4 text-white">Encotranos</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>Dirección: Birrisito, Paraíso de Cartago
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>WhatsApp: +506 8819-7603
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>contacto@ejemplo.com
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-3">
+              <h5 class="text-white">Accesos</h5>
+              <ul class="list-unstyled">
+                <li><a class="" href="">Quienes Somos?</a></li>
+                <li><a class="" href="">Contáctenos</a></li>
+                <li><a class="" href="">Servicios</a></li>
+                <li><a class="k" href="">Productos</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3">
+              <h5 class="text-white mb-4">Horarios</h5>
+              <p class="mb-1">Lunes - Viernes</p>
+              <h6 class="">09:00 AM - 05:00 PM</h6>
+              <p class="mb-1">Sábado</p>
+              <h6 class="">09:00 AM - 12:00 PM</h6>
+              <p class="mb-1">Domingo</p>
+              <h6 class="">Cerrado</h6>
+            </div>
+            <div class="col-lg-3 col-md-3">
+              <h5 class="text-white mb-4">Autor</h5>
+              <p>Joseph Alberto Carballo Sánchez</p>
+            </div>
+          </div>
+        </div>
+    </div>
 
 
 
@@ -230,6 +295,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/609bb6bc51.js" crossorigin="anonymous"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd4s-lsD1-FPS8g2PVNvjD8jiC700X7Ow&libraries=geometry&callback=initMap"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
