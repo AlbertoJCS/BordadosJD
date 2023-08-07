@@ -1,7 +1,13 @@
+:root {
+  --dark: #404A3D;
+  --blanco: #ffffff;
+}
+
 
 body {
     /*margin: 0;*/
-    /* background-image: url(../img/fondo.jpg); */
+    /*background-color: rgb(75, 10, 10);*/
+
 }
 
 .nombreEmpresa {
@@ -9,6 +15,7 @@ body {
     text-align: center; 
     font-weight: bold; 
     font-size: 40px;
+    font-family: "Lucida Handwriting";
 }
 
 .navbar-nav .nav-link {
@@ -17,7 +24,7 @@ body {
   }
 
 .carousel-item img {
-    height: 500px; /* Establece la altura deseada para las imágenes */
+    height: 700px; /* Establece la altura deseada para las imágenes */
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo su relación de aspecto */
   }
 
@@ -27,6 +34,7 @@ body {
   background-size: cover;
   background-position: center;
   color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
  
@@ -71,3 +79,91 @@ body {
     height: 350px; /* Cambiar el alto a tu preferencia */
   }
 }
+
+
+.footer {
+  background-color: var(--dark);
+}
+
+.formulario {
+  background-color: var(--blanco);
+  margin: -5rem auto 0 auto;/*se aceptan valores negativos, en este caso hacia arriba*/
+  width: 95%;
+  padding: 5rem;
+}
+
+.campo {
+  display: flex;/*Se coloca en el padre, para que los hijos puedan acceder a las propiedades de flex*/
+  margin-bottom: 2rem;
+}
+
+.campo__label {
+  flex: 0 0 9rem;/*El factor de crecimiento es 0, tampoco se va hacer mas pequeño, un valor base de 9rem y no crece debido a 0 y 0*/
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.campo__field {
+  flex: 1;/*flex box es una caja adaptable, como la etiqueta va tener un tamaño fijo de 9rem el otro espacio lo tomará el campo*/
+  border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+  height: 20rem;
+}
+
+/*Contacto*/
+.contacto-bg {
+  background-image: url(../img/miradorFondo.jpg);
+  height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.titulo {
+  color: #0833a2;
+  font-family: "Lucida Handwriting";
+}
+
+.absoluta {
+  position: absolute;
+  top: 18%;
+  left: 42%; /* Puedes usar cualquier valor numérico, como 45%, para ajustar la posición horizontal */
+  color: gold;
+  font-weight: bold;
+  font-size: 40px;
+  text-underline-position: above;
+}
+
+
+.mapa-wrapper {
+  /* Estilos adicionales para el mapa */
+  border: 1px solid #ccc; /* Ajusta el borde según tus preferencias */
+  border-radius: 10px; /* Ajusta el radio de las esquinas del borde según tus preferencias */
+  overflow: hidden; /* Evita que el mapa se desborde de su contenedor */
+}
+
+
+.somos{
+  flex-grow: 1;
+  width: 70%;
+  margin-top: 25px;
+}
+
+.somos p {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.somos img {
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin-right: 35px;
+  padding: 10px;
+}
+
+
+
+
+
