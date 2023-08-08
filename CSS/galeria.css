@@ -1,0 +1,39 @@
+:root {
+    --dark: #404A3D;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+} 
+  
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nombreEmpresa {
+    color: #ffffff; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 40px;
+    font-family: "Lucida Handwriting";
+}
+
+
+.column img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+
+
+.footer {
+background-color: var(--dark);
+}
+  
+.titulo {
+color: #0833a2;
+font-family: "Lucida Handwriting";
+}
