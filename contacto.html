@@ -12,7 +12,7 @@
   <!--BARRA DE NAVEGACION-->
   <div class="row fixed-top">
     <div class="col-sm-12 col-md-12 col-lg-12">
-      <nav id="mainNav" class="navbar navbar-light navbar-expand-md text-black text-start border rounded " data-bs-theme="light" style="background-color: #0833a2;">
+      <nav id="mainNav" class="navbar navbar-light navbar-expand-md text-black text-start border rounded " data-bs-theme="light">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="/">
           <span><img src="img/costa-rica.png" alt=""></span><span class="nombreEmpresa">BordadosJD</span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
@@ -27,7 +27,7 @@
                       <li><a class="dropdown-item text-center" href="gorras.html">Gorras</a></li>
                       <li><a class="dropdown-item text-center" href="camisas.html">Camisas</a></li>                
                     </ul></li>
-                  <li class="nav-item"><a class="nav-link" href="#bloqueQuienesSomos">¿Quienes Somos?</a></li>
+                  <li class="nav-item"><a class="nav-link" href="quienesSomos.html">¿Quienes Somos?</a></li>
                 </ul>
                 <a class="btn btn-primary shadow" role="button" href="contacto.html">Contáctenos</a>
             </div>
@@ -41,21 +41,47 @@
     <div class="contacto-bg">
       <h3 class="absoluta titulo">Contacto</h3>
     </div>
-      <form class="formulario">
-        <div class="form-group">
-          <label class="campo__label" for="nombre">Nombre</label>
-          <input id="nombre" class="form-control" type="text" placeholder="Tu Nombre">
+      <form class="formulario d-flex">
+        <div class="col p-2" style="flex: 45%;">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+          </div>
+          <div class="form-group">
+            <label>Género:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="Masculino" required>
+              <label class="form-check-label" for="generoMasculino">Masculino</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="genero" id="generoFemenino" value="Femenino" required>
+              <label class="form-check-label" for="generoFemenino">Femenino</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Registrar</button>
         </div>
-        <div class="form-group">
-          <label class="campo__label" for="email">E-mail</label>
-          <input id="email" class="form-control" type="email" placeholder="Tu E-mail">
-        </div>
-        <div class="form-group">
-          <label class="campo__label" for="mensaje">Mensaje</label>
-          <textarea id="mensaje" class="form-control campo__field--textarea"></textarea>
-        </div>
-        <div class="form-group">
-          <input class="btn btn-primary" type="submit" value="Enviar">
+        <div class="col p-2" style="flex: 45%;">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="ingreso">Rango de Ingreso:</label>
+            <input type="number" class="form-control" id="ingreso" name="ingreso" required>
+          </div>
+          <div class="form-group">
+            <label for="gradoAcademico">Grado Académico:</label>
+            <select class="form-control" id="gradoAcademico" name="gradoAcademico" multiple required>
+              <option value="Primaria">Primaria</option>
+              <option value="Secundaria">Secundaria</option>
+              <option value="Universidad">Universidad</option>
+              <option value="Postgrado">Postgrado</option>
+            </select>
+          </div>
         </div>
       </form>
   </div>
