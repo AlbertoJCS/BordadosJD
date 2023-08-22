@@ -44,12 +44,9 @@ const app = Vue.createApp({
         this.errors.provincias = 'Porfavor Seleccione una provincia';
       }
 
-      // Agrega más lógica de validación aquí según tus requisitos
-
-      // Si no hay errores, puedes enviar los datos
       if (Object.keys(this.errors).length === 0) {
         // Aquí enviarías los datos del formulario
-        console.log('Formulario válido, enviando datos...');
+        alert('Formulario válido, enviando datos...');
       }
     }
     //clearForm(){
