@@ -1,21 +1,18 @@
-const app = Vue.createApp({
-  data() { //Data es una función que devuelve un objeto
-    //El objeto que se retorna tiene 2 propiedades: FormData y Errors
-    return {
-      FormData: { //FormData es el objeto que retorna data()
-        nombre: '',
-        email: '',
-        fechaEntrega: null,
-        genero: '', // Almacena el valor seleccionado ('Masculino' o 'Femenino')
-        cantProductos: null,
-        provincias: '' // Almacena la provincia seleccionada
-      },
-      errors: {}
-    }; 
+const app = new Vue({
+  el: '#app',
+  data: {
+    formData: {
+      nombre: '',
+      email: '',
+      fechaEntrega: null,
+      genero: '',
+      cantProductos: null,
+      provincias: ''
+    },
+    errors: {}
   },
   methods: {
     submitForm() {
-      // Lógica de validación
       this.errors = {};
 
       if (!this.formData.nombre) {
@@ -33,26 +30,23 @@ const app = Vue.createApp({
       }
 
       if (!this.formData.genero) {
-        this.errors.genero = 'Porfavor Seleccione un Genero';
+        this.errors.genero = 'Por favor seleccione un género.';
       }
 
       if (!this.formData.cantProductos) {
-        this.errors.cantProductos = 'Porfavor Seleccione la cantidad de productos deseados';
+        this.errors.cantProductos = 'Por favor seleccione la cantidad de productos deseados.';
       }
 
       if (!this.formData.provincias) {
-        this.errors.provincias = 'Porfavor Seleccione una provincia';
+        this.errors.provincias = 'Por favor seleccione una provincia.';
       }
+
+      // Agrega más lógica de validación aquí según tus requisitos
 
       if (Object.keys(this.errors).length === 0) {
-        // Aquí enviarías los datos del formulario
         alert('Formulario válido, enviando datos...');
+        // Agrega aquí la lógica para enviar los datos del formulario al servidor
       }
     }
-    //clearForm(){
-
-    //}
   }
 });
-
-app.mount('#app');
