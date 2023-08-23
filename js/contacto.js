@@ -5,9 +5,10 @@ const app = new Vue({
       nombre: '',
       email: '',
       fechaEntrega: null,
-      genero: '',
+      envio: 'Local',
       cantProductos: null,
-      provincias: ''
+      provincias: '--',
+      mensaje: ''
     },
     errors: {}
   },
@@ -25,28 +26,34 @@ const app = new Vue({
         this.errors.email = 'Por favor ingresa un correo electrónico válido.';
       }
 
-      if (!this.formData.fechaEntrega) {
-        this.errors.fechaEntrega = 'Por favor ingrese una fecha de Entrega.';
-      }
-
-      if (!this.formData.genero) {
-        this.errors.genero = 'Por favor seleccione un género.';
-      }
-
-      if (!this.formData.cantProductos) {
-        this.errors.cantProductos = 'Por favor seleccione la cantidad de productos deseados.';
-      }
-
-      if (!this.formData.provincias) {
-        this.errors.provincias = 'Por favor seleccione una provincia.';
+      if (!this.formData.mensaje) {
+        this.errors.mensaje = 'Por favor seleccione una provincia.';
       }
 
       // Agrega más lógica de validación aquí según tus requisitos
 
       if (Object.keys(this.errors).length === 0) {
         alert('Formulario válido, enviando datos...');
-        // Agrega aquí la lógica para enviar los datos del formulario al servidor
+        this.enviarMail();
       }
+    },
+    enviarMail(){
+      alert('Enviado con Exitó!');
+      const btn = document.getElementById('button');
+      btn.value = 'Enviando...';
+    
+      const serviceID = 'default_service';
+      const templateID = 'template_3fovon8';
+      const formElement = document.getElementById('form');
+
+      emailjs.sendForm(serviceID, templateID, formElement)
+       .then(() => {
+         btn.value = 'Enviar';
+         alert('Enviado con Exitó!');
+       }, (err) => {
+         btn.value = 'Enviado';
+         alert(JSON.stringify(err));
+       });
     }
   }
 });

@@ -42,8 +42,13 @@
     </div>
         <p class="text-center">En caso de querer una cotización o alguna detalle de nuestros servicios, puede brindarnos sus datos y nos encargaremos de atender su duda o consulta.</p>
   <div id="app">
-      <form @submit.prevent="submitForm" class="formulario d-flex">
-        <div class="col p-2" style="flex: 45%;">
+      <form id="form" @submit.prevent="submitForm" class="formulario d-flex">
+        <div class="col p-2 form1">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input v-model="formData.nombre" type="text" class="form-control" id="nombre" name="nombre">
+            <span v-if="errors.nombre" class="error-message">{{ errors.nombre }}</span>
+          </div>
           <div class="form-group">
             <label for="email">Email:</label>
             <input v-model="formData.email"  type="email" class="form-control" id="email" name="email">
@@ -57,26 +62,22 @@
             <br>
           </div>
           <div class="form-group">
-            <label>Género:</label>
+            <label>Envio:</label>
             <div class="form-check">
-              <input v-model="formData.genero" class="form-check-input" type="radio" name="genero" id="generoMasculino" value="Masculino" >
-              <label class="form-check-label" for="generoMasculino">Masculino</label>
+              <input v-model="formData.envio" class="form-check-input" type="radio" name="envio" id="envio" value="mensajeria" >
+              <label class="form-check-label" for="generoMasculino">Mensajería</label>
             </div>
             <div class="form-check">
-              <input v-model="formData.genero" class="form-check-input" type="radio" name="genero" id="generoFemenino" value="Femenino" >
-              <label class="form-check-label" for="generoFemenino">Femenino</label>
+              <input v-model="formData.envio" class="form-check-input" type="radio" name="envio" id="envio" value="local" >
+              <label class="form-check-label" for="generoFemenino">Recoger En Local</label>
             </div>
-            <span v-if="errors.genero" class="error-message">{{ errors.genero }}</span>
+            <span v-if="errors.envio" class="error-message">{{ errors.envio }}</span>
             <br>
           </div>
-          <button  type="submit" class="btn btn-primary mt-5">Registrar</button>
         </div>
-        <div class="col p-2" style="flex: 45%;">
-          <div class="form-group">
-            <label for="nombre">Nombre Completo:</label>
-            <input v-model="formData.nombre" type="text" class="form-control" id="nombre" name="nombre">
-            <span v-if="errors.nombre" class="error-message">{{ errors.nombre }}</span>
-          </div>
+        <div class="col p-2 form1">
+
+
           <div class="form-group">
             <label for="cantProductos">cantidad de productos requeridos:</label>
             <input v-model="formData.cantProductos" type="number" name="cantProductos" class="form-control" id="cantProductos">
@@ -89,6 +90,16 @@
             <span v-if="errors.provincias" class="error-message">{{ errors.provincias }}</span>
             <br>
           </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <input v-model="formData.mensaje" class="form-control" id="mensaje"></input>
+            <span v-if="errors.mensaje" class="error-message">{{ errors.mensaje }}</span>
+            <br>
+          </div>
+          <div class="form-group d-flex justify-content-center">
+            <button id="button" type="submit" class="btn btn-primary mt-5">Enviar</button>
+          </div>
+
         </div>
       </form>
   </div>
@@ -143,6 +154,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/609bb6bc51.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('B0ZgrWiXE6f86eD_E')</script>
     <script src="js/contacto.js"></script>
     <script src="CSS/contacto.css"></script>
     <script src="js/apiProvincias.js"></script>

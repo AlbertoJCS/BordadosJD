@@ -90,41 +90,6 @@ body {
   background-color: #0b4ea2;
 }
 
-.formulario {
-  background-color: var(--blanco);
-  margin: -5rem auto 0 auto;/*se aceptan valores negativos, en este caso hacia arriba*/
-  width: 95%;
-  padding: 5rem;
-}
-
-.campo {
-  display: flex;/*Se coloca en el padre, para que los hijos puedan acceder a las propiedades de flex*/
-  margin-bottom: 2rem;
-}
-
-.campo__label {
-  flex: 0 0 9rem;/*El factor de crecimiento es 0, tampoco se va hacer mas pequeño, un valor base de 9rem y no crece debido a 0 y 0*/
-  text-align: right;
-  padding-right: 2rem;
-}
-
-.campo__field {
-  flex: 1;/*flex box es una caja adaptable, como la etiqueta va tener un tamaño fijo de 9rem el otro espacio lo tomará el campo*/
-  border: 1px solid var(--gris);
-}
-
-.campo__field--textarea {
-  height: 20rem;
-}
-
-/*Contacto*/
-.contacto-bg {
-  background-image: url(../img/miradorFondo.jpg);
-  height: 20rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .titulo {
   color: #ffd700;
   font-family: "Lucida Handwriting";
@@ -133,7 +98,7 @@ body {
 .absoluta {
   position: absolute;
   top: 18%;
-  left: 42%; /* Puedes usar cualquier valor numérico, como 45%, para ajustar la posición horizontal */
+  left: 42%;
   color: gold;
   font-weight: bold;
   font-size: 40px;
@@ -142,10 +107,9 @@ body {
 
 
 .mapa-wrapper {
-  /* Estilos adicionales para el mapa */
-  border: 1px solid #ccc; /* Ajusta el borde según tus preferencias */
-  border-radius: 10px; /* Ajusta el radio de las esquinas del borde según tus preferencias */
-  overflow: hidden; /* Evita que el mapa se desborde de su contenedor */
+  border: 1px solid #ccc; 
+  border-radius: 10px;
+  overflow: hidden; 
 }
 
 
@@ -296,6 +260,57 @@ body {
 .footer-text{
   color: black;
   font-size: 22px;
+}
+
+
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+.formulario {
+  background-color: var(--blanco);
+  margin: -5rem auto 0 auto;
+  width: 95%;
+  padding: 5rem;
+  border-radius: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formulario .form1{
+  flex: 50%;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo__label {
+  flex: 0 0 9rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.campo__field {
+  flex: 1;
+  border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+  height: 20rem;
+}
+
+/*Contacto*/
+.contacto-bg {
+  background-image: url(../img/miradorFondo.jpg);
+  height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
