@@ -9,15 +9,15 @@
     <title>Document</title>
 </head>
 <body>
+
   <!--BARRA DE NAVEGACION-->
   <div class="row fixed-top">
     <div class="col-sm-12 col-md-12 col-lg-12">
-      <nav id="mainNav" class="navbar navbar-light navbar-expand-md text-black text-start border rounded " data-bs-theme="light">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/">
+      <nav id="mainNav" class="navbar navbar-light navbar-expand-md text-black text-start border rounded" data-bs-theme="light">
+        <div class="container col-md-12"><a class="navbar-brand d-flex align-items-center" href="index.html">
           <span><img src="img/costa-rica.png" alt=""></span><span class="nombreEmpresa">BordadosJD</span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto mx-2">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                   <li class="nav-item"><a class="nav-link" href="#bloqueServicio">Servicios</a></li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Catálogo</a>
@@ -34,14 +34,16 @@
         </div>
       </nav>
     </div>
-  </div>
+  </div>  
 
   <!--Formulario-->
   <div class="contacto-bg">
       <h3 class="titulo text-center absoluta">Contáctenos</h3>
     </div>
-        <p class="text-center">En caso de querer una cotización o alguna detalle de nuestros servicios, puede brindarnos sus datos y nos encargaremos de atender su duda o consulta.</p>
-  <div id="app">
+    <div class="d-flex justify-content-center">
+      <p class="text-center w-75">En caso de querer una cotización o alguna detalle de nuestros servicios, puede brindarnos sus datos y nos encargaremos de atender su duda o consulta.</p>
+    </div>
+  <div id="app">  
       <form id="form" @submit.prevent="submitForm" class="formulario d-flex">
         <div class="col p-2 form1">
           <div class="form-group">
