@@ -29,7 +29,7 @@ body {
   }
 
 .carousel-item img {
-    height: 700px; /* Establece la altura deseada para las imágenes */
+    height: 700px; 
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo su relación de aspecto */
   }
 
@@ -80,8 +80,8 @@ body {
 
 @media (max-width: 576px) {
   .galeria {
-    width: 350px; /* Cambiar el ancho a tu preferencia */
-    height: 350px; /* Cambiar el alto a tu preferencia */
+    width: 350px; 
+    height: 350px;
   }
 }
 
