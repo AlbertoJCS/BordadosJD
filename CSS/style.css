@@ -335,7 +335,7 @@ body {
 .carousel-caption {
   position: absolute;
   top: 08%; /* Ajusta la posición vertical */
-  left: 27%; /* Ajusta la posición horizontal */
+  left: 30%; /* Ajusta la posición horizontal */
   transform: translate(-50%, -50%); /* Centra el elemento */
   color: rgb(236, 236, 236); /* Color del texto */
   font-size: 56px;
@@ -345,7 +345,7 @@ body {
 
 .carousel-caption2 {
   position: absolute;
-  top: 70%; /* Ajusta la posición vertical */
+  top: 64%; /* Ajusta la posición vertical */
   left: 50%; /* Ajusta la posición horizontal */
   transform: translate(-50%, -50%); /* Centra el elemento */
   color: rgb(255, 255, 255); /* Color del texto */
@@ -357,7 +357,7 @@ body {
 
 .carousel-caption3 {
   position: absolute;
-  top: 70%; /* Ajusta la posición vertical */
+  top: 64%; /* Ajusta la posición vertical */
   left: 50%; /* Ajusta la posición horizontal */
   transform: translate(-50%, -50%); /* Centra el elemento */
   color: rgb(245, 237, 237); /* Color del texto */
@@ -366,6 +366,27 @@ body {
   font-weight: bold;
   text-align: center;
 }
+
+
+.image-overlay {
+  position: relative;
+}
+
+.image-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad aquí */
+}
+
+
+
+
+
+
 
 
 
