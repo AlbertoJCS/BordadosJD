@@ -33,12 +33,13 @@ const app = new Vue({
       // Agrega más lógica de validación aquí según tus requisitos
 
       if (Object.keys(this.errors).length === 0) {
-        alert('Formulario válido, enviando datos...');
+        const btn = document.getElementById('button');
+        btn.value = 'Enviando...';
         this.enviarMail();
       }
     },
     enviarMail(){
-      alert('Enviado con Exitó!');
+      const bannerElement = document.getElementById('banner');
       const btn = document.getElementById('button');
       btn.value = 'Enviando...';
     
@@ -49,10 +50,15 @@ const app = new Vue({
       emailjs.sendForm(serviceID, templateID, formElement)
        .then(() => {
          btn.value = 'Enviar';
-         alert('Enviado con Exitó!');
+         bannerElement.style.color = 'green'; 
+         bannerElement.textContent = '¡Enviado con éxito!';
+         bannerElement.style.display = 'block';
        }, (err) => {
          btn.value = 'Enviado';
-         alert(JSON.stringify(err));
+         bannerElement.style.color = 'red';
+         bannerElement.textContent = 'Hubo un error al enviar el correo.';
+         bannerElement.style.display = 'block';
+         console.error(err);
        });
     }
   }

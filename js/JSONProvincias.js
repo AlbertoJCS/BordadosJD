@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
     
-    // Hacer la solicitud a la API
+    // Hacer la solicitud al json
     fetch(url)
         //Estos métodos toman funciones como argumentos, que se ejecutarán cuando la Promesa se resuelva.
     .then(response => response.json()) // convierte la respuesta de la solicitud en formato JSON.
